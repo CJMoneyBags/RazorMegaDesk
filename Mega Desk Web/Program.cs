@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Mega_Desk_Web.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<Mega_Desk_WebContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Mega_Desk_WebContext") ?? throw new InvalidOperationException("Connection string 'Mega_Desk_WebContext' not found.")));
 
 var app = builder.Build();
 
