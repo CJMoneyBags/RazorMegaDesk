@@ -16,6 +16,7 @@ namespace RazorMegaDesk.Models
         //public Desk Desk { get; set; }
 
         [Display(Name = "Rush Option")]
+        [Required]
         public int RushDays { get; set; }
 
         [Display(Name = "Customer Name")]
@@ -31,12 +32,18 @@ namespace RazorMegaDesk.Models
         public double QuoteTotal { get; set; }
 
         [Range(24, 96)]
+        [Required]
+
         public int Width { get; set; }
         [Range(12, 48)]
+        [Required]
+
         public int Depth { get; set; }
 
         [Display(Name = "Number of Drawers")]
         [Range(0, 7)]
+        [Required]
+
         public int NumberOfDrawers { get; set; }
 
         public const int SQUAREINCHPRICE = 1;
