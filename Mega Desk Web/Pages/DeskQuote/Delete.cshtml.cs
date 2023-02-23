@@ -20,7 +20,7 @@ namespace Mega_Desk_Web.Pages.DeskQuote
         }
 
         [BindProperty]
-      public DeskQuote DeskQuote { get; set; } = default!;
+      public RazorMegaDesk.Models.DeskQuote DeskQuote { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
