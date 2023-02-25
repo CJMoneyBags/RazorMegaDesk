@@ -21,12 +21,44 @@ namespace Mega_Desk_Web.Pages.DeskQuote
 
         public IList<RazorMegaDesk.Models.DeskQuote> DeskQuote { get;set; } = default!;
 
-        public async Task OnGetAsync()
+        public string CustomerSort { get; set; }
+        public string DateSort { get; set; }
+        public string CurrentFilter { get; set; }
+        public string CurrentSort { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+        public async Task OnGetAsync(string sortOrder)
         {
-            if (_context.DeskQuote != null)
+            // Searching by customer name.
+            var quotes = from q in _context.DeskQuote
+                         select q;
+            if (!string.IsNullOrEmpty(SearchString))
             {
-                DeskQuote = await _context.DeskQuote.ToListAsync();
+                quotes = quotes.Where(q => q.CustomerName.Contains(SearchString));
             }
+
+            // Sorting
+            CustomerSort = String.IsNullOrWhiteSpace(sortOrder) ? "name_desc" : "";
+            DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    quotes = quotes.OrderByDescending(s => s.CustomerName);
+                    break;
+                case "Date":
+                    quotes = quotes.OrderBy(s => s.QuoteDate);
+                    break;
+                case "date_desc":
+                    quotes = quotes.OrderByDescending(s => s.QuoteDate);
+                    break;
+                default:
+                    quotes = quotes.OrderBy(s => s.CustomerName);
+                    break;
+            }    
+
+                DeskQuote = await quotes.ToListAsync();
+            
         }
     }
 }
