@@ -20,3 +20,27 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.carousel-item {
+    height: 32rem;
+    background: #777;
+    position: relative;
+    color: white
+}
+
+.carousel-item img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+}
+
+.overlay-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-size: contain;
+}
