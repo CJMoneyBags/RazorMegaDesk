@@ -26,7 +26,6 @@ namespace Mega_Desk_Web.Models
                 context.DeskQuote.AddRange(
                     new DeskQuote
                     {
-                        Id = 1,
                         DeskMaterial = "Oak",
                         RushDays = 14,
                         CustomerName = "Michael Scott",
@@ -39,7 +38,6 @@ namespace Mega_Desk_Web.Models
 
                     new DeskQuote
                     {
-                        Id = 2,
                         DeskMaterial = "Pine",
                         RushDays = 7,
                         CustomerName = "Dwight Schrute",
@@ -52,7 +50,6 @@ namespace Mega_Desk_Web.Models
 
                     new DeskQuote
                     {
-                        Id = 3,
                         DeskMaterial = "Veneer",
                         RushDays = 5,
                         CustomerName = "James Halpert",
@@ -65,7 +62,6 @@ namespace Mega_Desk_Web.Models
 
                     new DeskQuote
                     {
-                        Id = 4,
                         DeskMaterial = "Oak",
                         RushDays = 7,
                         CustomerName = "Chris Bagwell",
@@ -78,7 +74,6 @@ namespace Mega_Desk_Web.Models
 
                     new DeskQuote
                     {
-                        Id = 5,
                         DeskMaterial = "Rosewood",
                         RushDays = 3,
                         CustomerName = "Austin Earl",
@@ -91,7 +86,6 @@ namespace Mega_Desk_Web.Models
 
                     new DeskQuote
                     {
-                        Id = 6,
                         DeskMaterial = "Laminate",
                         RushDays = 14,
                         CustomerName = "Jason Macdonald",
@@ -104,7 +98,6 @@ namespace Mega_Desk_Web.Models
 
                     new DeskQuote
                     {
-                        Id = 7,
                         DeskMaterial = "Oak",
                         RushDays = 5,
                         CustomerName = "Alex Vasiuk",
