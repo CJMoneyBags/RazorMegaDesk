@@ -11,18 +11,7 @@
     <h4>DeskQuote</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DeskQuote.DeskMaterial)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DeskQuote.DeskMaterial)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DeskQuote.RushDays)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DeskQuote.RushDays)
-        </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DeskQuote.CustomerName)
         </dt>
@@ -36,28 +25,40 @@
             @Html.DisplayFor(model => model.DeskQuote.QuoteDate)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DeskQuote.QuoteTotal)
+            @Html.DisplayNameFor(model => model.DeskQuote.DeskMaterial)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DeskQuote.QuoteTotal)
+            @Html.DisplayFor(model => model.DeskQuote.DeskMaterial)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DeskQuote.Width)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DeskQuote.Width)
+            @Html.DisplayFor(model => model.DeskQuote.Width)<text> inches</text>
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DeskQuote.Depth)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DeskQuote.Depth)
+            @Html.DisplayFor(model => model.DeskQuote.Depth)<text> inches</text>
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DeskQuote.NumberOfDrawers)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DeskQuote.NumberOfDrawers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeskQuote.RushDays)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeskQuote.RushDays)<text> days</text>
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeskQuote.QuoteTotal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeskQuote.QuoteTotal)
         </dd>
     </dl>
 </div>
